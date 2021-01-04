@@ -31,7 +31,9 @@ const arrOfDataToObj = (arr, legend) => {
 const arrOfStrToArrOfObj = (arr) =>
     arr.map((elem) => arrOfDataToObj(elem, legend));
 
-const data = splitOnBlankLine(input("./steps.csv")).map(trim).map(splitOnComma);
+const data = splitOnBlankLine(input(`${__dirname}/steps.csv`))
+    .map(trim)
+    .map(splitOnComma);
 const legend = columnNamesToProperties(data);
 
 module.exports = arrOfStrToArrOfObj(data);
