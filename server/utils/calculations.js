@@ -7,16 +7,17 @@ const total = (arr, prop) =>
         typeof num === "number" ? num + parseInt(obj[prop]) : 0
     );
 
+const generateArrayOfN = (n) => new Array(n).fill(n);
+
 let dataSortedByWeek = [];
-const splitDataIntoWeeks = (arr, idx = 0) => {
-    let singleWeek = [];
-    for (var i = 0; i !== 7; i++) {
-        singleWeek.push(arr[idx + i]);
-    }
+
+const splitDataIntoWeeks = (arr, startingIdx = 0) => {
+    let singleWeek = generateArrayOfN(7).map((elem, i) => arr[startingIdx + i]);
     dataSortedByWeek.push(singleWeek);
     if (dataSortedByWeek.length < 52) {
-        splitDataIntoWeeks(arr, idx + 7);
+        splitDataIntoWeeks(arr, startingIdx + 7);
     }
+    return singleWeek;
 };
 
 module.exports.calculateWeeklyActivityTotal = (data, activity) => {
