@@ -1,6 +1,3 @@
-const app = require("express")();
-const fs = require("fs");
-
 const input = require("./input");
 
 const split = (on) => (value) => value.split(on);
