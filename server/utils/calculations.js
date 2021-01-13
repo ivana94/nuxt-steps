@@ -7,7 +7,7 @@ const total = (arr, prop) =>
         typeof num === "number" ? num + parseInt(obj[prop]) : 0
     );
 
-const generateArrayOfN = (n) => new Array(n).fill(n);
+const generateArrayOfN = (n) => [...new Array(n)];
 
 let dataSortedByWeek = [];
 
