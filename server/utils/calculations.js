@@ -21,7 +21,8 @@ const splitDataIntoWeeks = (arr, startingIdx = 0) => {
 };
 
 module.exports.calculateWeeklyActivityTotal = (data, activity) => {
-    splitDataIntoWeeks(data);
+    // splitDataIntoWeeks(data);
+    console.log("-------", generateArrayOfWeeks(data));
     return dataSortedByWeek.map((week) => total(week, activity));
 };
 
