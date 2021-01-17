@@ -1,0 +1,14 @@
+{
+  "Data": {
+    "description": "Auto imported from components/data.vue"
+  },
+  "LazyData": {
+    "description": "Auto imported from components/data.vue"
+  },
+  "Intro": {
+    "description": "Auto imported from components/intro.vue"
+  },
+  "LazyIntro": {
+    "description": "Auto imported from components/intro.vue"
+  }
+}

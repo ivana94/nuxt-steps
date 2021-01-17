@@ -17,12 +17,10 @@ const splitDataIntoWeeks = (arr, startingIdx = 0) => {
     if (dataSortedByWeek.length < 52) {
         splitDataIntoWeeks(arr, startingIdx + 7);
     }
-    return singleWeek;
 };
 
 module.exports.calculateWeeklyActivityTotal = (data, activity) => {
-    // splitDataIntoWeeks(data);
-    console.log("-------", generateArrayOfWeeks(data));
+    splitDataIntoWeeks(data);
     return dataSortedByWeek.map((week) => total(week, activity));
 };
 

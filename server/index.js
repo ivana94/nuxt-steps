@@ -11,14 +11,20 @@ const {
 
 app.get("/yearly-step-data", (req, res) => {
     res.json({
-        stepData: calculateYearlyActivityTotal(data, "steps", 2020),
-        distanceData: calculateYearlyActivityTotal(data, "distance", 2020),
+        yearlyStepData: calculateYearlyActivityTotal(data, "steps", 2020),
+        yearlyDistanceData: calculateYearlyActivityTotal(
+            data,
+            "distance",
+            2020
+        ),
     });
 });
 
-app.get("/test-week", (req, res) => {
-    const weeklyStepTotals = calculateWeeklyActivityTotal(data, "steps");
-    const weeklyDistanceTotals = calculateWeeklyActivityTotal(data, "distance");
+app.get("/weekly-step-data", (req, res) => {
+    res.json({
+        weeklyStepData: calculateWeeklyActivityTotal(data, "steps"),
+        weeklyDistanceData: calculateWeeklyActivityTotal(data, "distance"),
+    });
 });
 
 app.listen(8080, () => console.log("listening!"));
