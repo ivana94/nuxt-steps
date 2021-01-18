@@ -19,8 +19,9 @@ const splitDataIntoWeeks = (arr, startingIdx = 0) => {
     }
 };
 
-module.exports.calculateWeeklyActivityTotal = (data, activity) => {
-    splitDataIntoWeeks(data);
+module.exports.calculateWeeklyActivityTotal = (data, activity, year) => {
+    const dataSortedByYear = filterByYear(data, "date", year);
+    splitDataIntoWeeks(dataSortedByYear);
     return dataSortedByWeek.map((week) => total(week, activity));
 };
 

@@ -22,8 +22,12 @@ app.get("/yearly-step-data", (req, res) => {
 
 app.get("/weekly-step-data", (req, res) => {
     res.json({
-        weeklyStepData: calculateWeeklyActivityTotal(data, "steps"),
-        weeklyDistanceData: calculateWeeklyActivityTotal(data, "distance"),
+        weeklyStepData: calculateWeeklyActivityTotal(data, "steps", 2020),
+        weeklyDistanceData: calculateWeeklyActivityTotal(
+            data,
+            "distance",
+            2020
+        ),
     });
 });
 
