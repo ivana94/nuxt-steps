@@ -1,6 +1,7 @@
 <template>
     <div class="text-container">
         <h1 class="main-header">steps</h1>
+
         <p class="highlight">
             Walking is the ultimate act of isolation.
         </p>

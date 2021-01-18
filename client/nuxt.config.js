@@ -3,6 +3,7 @@ export default {
     axios: {
         baseURL: "http://localhost:8080", // Used as fallback if no runtime config is provided
     },
+    css: ["~/assets/main.css"],
     components: {
         dirs: [
             "~/components",

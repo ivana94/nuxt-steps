@@ -1,5 +1,5 @@
 <template>
-    <div class="data-container">
+    <div class="data-container" v-if="yearlyStepData">
         <div class="align-text-left">
             <h2>2020 -----</h2>
             <h3>{{ yearlyStepData }} steps</h3>
@@ -7,6 +7,9 @@
                 {{ yearlyDistanceDataMiles }} miles /
                 {{ yearlyDistanceDataKm }} km
             </h3>
+            <template>
+                <NuxtLink to="/weekly">Weekly data here</NuxtLink>
+            </template>
         </div>
     </div>
 </template>
@@ -30,7 +33,7 @@ export default {
         // const { weeklyStepData, weeklyDistanceData } = await $axios.$get(
         //     "/weekly-step-data"
         // );
-        this.yearlyStepData = yearlyStepData;
+        this.yearlyStepData = mixins.methods.formatLargeNum(yearlyStepData);
         this.yearlyDistanceDataMiles = mixins.methods.formatLargeNum(
             yearlyDistanceData[0]
         );
