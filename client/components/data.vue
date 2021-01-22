@@ -30,9 +30,6 @@ export default {
         const { yearlyStepData, yearlyDistanceData } = await this.$axios.$get(
             "/yearly-step-data"
         );
-        // const { weeklyStepData, weeklyDistanceData } = await $axios.$get(
-        //     "/weekly-step-data"
-        // );
         this.yearlyStepData = mixins.methods.formatLargeNum(yearlyStepData);
         this.yearlyDistanceDataMiles = mixins.methods.formatLargeNum(
             yearlyDistanceData[0]

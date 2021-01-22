@@ -12,9 +12,10 @@ const generateArrayOfN = (n) => [...new Array(n)];
 let dataSortedByWeek = [];
 
 const splitDataIntoWeeks = (arr, startingIdx = 0) => {
+    console.log(arr[0]);
     let singleWeek = generateArrayOfN(7).map((elem, i) => arr[startingIdx + i]);
     dataSortedByWeek.push(singleWeek);
-    if (dataSortedByWeek.length < 52) {
+    if (dataSortedByWeek.length < 48) {
         splitDataIntoWeeks(arr, startingIdx + 7);
     }
 };
