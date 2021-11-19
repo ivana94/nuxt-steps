@@ -32,4 +32,4 @@ app.get("/weekly-step-data", (req, res) => {
     });
 });
 
-app.listen(process.env.DATABASE_URL, () => console.log("listening!"));
+app.listen(process.env.DATABASE_URL || 8080, () => console.log("listening!"));

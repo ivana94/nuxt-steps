@@ -3,12 +3,14 @@
     "name": "weekly",
     "path": "/weekly",
     "component": "/Users/ivanamatijevic/dev/steps/client/pages/weekly.vue",
-    "chunkName": "pages/weekly"
+    "chunkName": "pages/weekly",
+    "_name": "_5396c9fc"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/ivanamatijevic/dev/steps/client/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_3ebf6aa7"
   }
 ]
