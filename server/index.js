@@ -4,6 +4,7 @@ const app = express();
 app.use(express.static(__dirname + "/../client"));
 
 const data = require("./utils/csv-to-js");
+
 const {
     calculateYearlyActivityTotal,
     calculateWeeklyActivityTotal,
@@ -31,4 +32,4 @@ app.get("/weekly-step-data", (req, res) => {
     });
 });
 
-app.listen(8080, () => console.log("listening!"));
+app.listen(process.env.DATABASE_URL, () => console.log("listening!"));
